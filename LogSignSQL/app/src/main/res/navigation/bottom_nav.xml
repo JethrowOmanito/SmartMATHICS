@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/home">
+
+    <fragment android:id="@+id/home"
+        android:label="Home"
+        android:name="com.example.logsignsql.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment android:id="@+id/pdf"
+        android:label="PDF"
+        android:name="com.example.logsignsql.ui.pdf.pdffragment"
+        tools:layout= "@layout/fragment_pdffragment"/>
+
+    <fragment android:id="@+id/video"
+        android:label="Video"
+        android:name="com.example.logsignsql.ui.video.videoFragment"
+        tools:layout="@layout/fragment_video"/>
+
+    <fragment android:id="@+id/exam"
+        android:label="Exam"
+        android:name="com.example.logsignsql.ui.Exam.Exam"
+        tools:layout="@layout/fragment_exam">
+        <action
+            android:id="@+id/action_quiz_self"
+            app:destination="@id/exam" />
+    </fragment>
+
+    <fragment android:id="@+id/module"
+        android:label="Module"
+        android:name="com.example.logsignsql.ui.modules.modulesFragment"
+        tools:layout="@layout/fragment_exam"/>
+
+
+</navigation>
